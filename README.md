@@ -1,19 +1,25 @@
-# GameVault
+# GameVault (Flutter Skeleton)
 
-A new Flutter project created with FlutLab - https://flutlab.io
+A starter structure for a physical video game collection tracker.
 
-## Getting Started
+## Quick Start
+1) Create a Flutter project (stable channel recommended):
+   ```bash
+   flutter create gamevault
+   cd gamevault
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+2) Replace the generated `lib/` with the `lib/` from this skeleton.
+   Copy `analysis_options.yaml` and `pubspec.yaml` (merge dependencies as needed).
 
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
+3) Run:
+   ```bash
+   flutter pub get
+   flutter run
+   ```
 
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Getting Started: FlutLab - Flutter Online IDE
-
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
+### Notes
+- Uses Riverpod (or Provider swap) ready structure; minimal code avoids hard deps.
+- Screens included: Home, Platform, Game Detail, Add Game Sheet, Wish List.
+- Routing centralized in `routes/app_router.dart` with simple `Navigator` example.
+- Theme in `core/theme/app_theme.dart` (dark-first with accent colors).
