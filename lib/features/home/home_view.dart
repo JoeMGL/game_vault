@@ -28,30 +28,44 @@ class HomeView extends StatelessWidget {
             ),
             SliverList(
               delegate: SliverChildListDelegate([
-                const SizedBox(height: 8),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
-                  child: Row(
-                    children: [
-                      Expanded(
+                const SizedBox(
+                  height: 150,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 260, // ✅ finite width
                           child: StatCard(
-                              icon: Icons.videogame_asset,
-                              title: 'Games',
-                              value: '284',
-                              subtext: '+2 this week')),
-                      Expanded(
+                            icon: Icons.videogame_asset,
+                            title: 'Games',
+                            value: '284',
+                            subtext: '+2 this week',
+                          ),
+                        ),
+                        SizedBox(width: 12),
+                        SizedBox(
+                          width: 260,
                           child: StatCard(
-                              icon: Icons.attach_money,
-                              title: 'Value',
-                              value: '\$7,820',
-                              subtext: 'Top: Super Metroid')),
-                      Expanded(
+                            icon: Icons.attach_money,
+                            title: 'Value',
+                            value: '\$7,820',
+                            subtext: 'Top: Super Metroid',
+                          ),
+                        ),
+                        SizedBox(width: 12),
+                        SizedBox(
+                          width: 260,
                           child: StatCard(
-                              icon: Icons.dashboard_customize,
-                              title: 'Platforms',
-                              value: '9',
-                              subtext: 'Most: Switch')),
-                    ],
+                            icon: Icons.dashboard_customize,
+                            title: 'Platforms',
+                            value: '9',
+                            subtext: 'Most: Switch',
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 4),
